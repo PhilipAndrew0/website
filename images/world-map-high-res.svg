@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <style>
+      .land { fill: #b3d1ff; stroke: #4d94ff; stroke-width: 0.5; }
+      .lakes { fill: #ffffff; stroke: #4d94ff; stroke-width: 0.3; }
+      .borders { fill: none; stroke: #4d94ff; stroke-width: 0.3; }
+    </style>
+  </defs>
+  <!-- World map outline with improved detail -->
+  <rect width="1200" height="600" fill="#e6f2ff"/>
+  
+  <!-- Continents and major landmasses -->
+  <g class="land">
+    <!-- North America -->
+    <path d="M120,160 C150,140 180,120 210,110 C240,100 270,95 300,100 C330,105 360,115 390,130 C420,145 450,165 470,190 C490,215 500,245 505,275 C510,305 510,335 505,365 C500,395 490,425 475,450 C460,475 440,495 415,510 C390,525 360,535 330,540 C300,545 270,545 240,540 C210,535 180,525 155,510 C130,495 110,475 95,450 C80,425 70,395 65,365 C60,335 60,305 65,275 C70,245 80,215 95,190 C110,165 130,145 150,130 L120,160 Z"/>
+    
+    <!-- South America -->
+    <path d="M300,450 C320,435 345,425 370,420 C395,415 420,415 445,420 C470,425 495,435 515,450 C535,465 550,485 560,505 C570,525 575,550 575,575 C575,600 570,625 560,645 C550,665 535,680 515,690 C495,700 470,705 445,705 C420,705 395,700 370,690 C345,680 325,665 310,645 C295,625 285,600 280,575 C275,550 275,525 280,500 C285,475 295,450 310,430 L300,450 Z"/>
+    
+    <!-- Europe -->
+    <path d="M600,150 C620,140 645,135 670,135 C695,135 720,140 740,150 C760,160 775,175 785,195 C795,215 800,235 800,255 C800,275 795,295 785,315 C775,335 760,350 740,360 C720,370 695,375 670,375 C645,375 620,370 600,360 C580,350 565,335 555,315 C545,295 540,275 540,255 C540,235 545,215 555,195 C565,175 580,160 600,150 Z"/>
+    
+    <!-- Africa -->
+    <path d="M600,350 C620,340 645,335 670,335 C695,335 720,340 740,350 C760,360 775,375 785,395 C795,415 800,435 800,455 C800,475 795,495 785,515 C775,535 760,550 740,560 C720,570 695,575 670,575 C645,575 620,570 600,560 C580,550 565,535 555,515 C545,495 540,475 540,455 C540,435 545,415 555,395 C565,375 580,360 600,350 Z"/>
+    
+    <!-- Asia -->
+    <path d="M800,150 C830,135 865,125 900,120 C935,115 970,115 1005,120 C1040,125 1075,135 1105,150 C1135,165 1160,185 1180,210 C1200,235 1215,265 1225,295 C1235,325 1240,355 1240,385 C1240,415 1235,445 1225,475 C1215,505 1200,530 1180,550 C1160,570 1135,585 1105,595 C1075,605 1040,610 1005,610 C970,610 935,605 900,595 C865,585 835,570 810,550 C785,530 765,505 750,475 C735,445 725,415 720,385 C715,355 715,325 720,295 C725,265 735,235 750,210 C765,185 780,165 800,150 Z"/>
+    
+    <!-- Australia -->
+    <path d="M950,450 C965,440 985,435 1005,435 C1025,435 1045,440 1060,450 C1075,460 1085,475 1090,490 C1095,505 1095,520 1090,535 C1085,550 1075,565 1060,575 C1045,585 1025,590 1005,590 C985,590 965,585 950,575 C935,565 925,550 920,535 C915,520 915,505 920,490 C925,475 935,460 950,450 Z"/>
+    
+    <!-- Antarctica (simplified) -->
+    <path d="M200,550 C300,540 400,535 500,535 C600,535 700,540 800,550 C900,560 1000,575 1100,595 L1100,600 L100,600 L100,595 C133,575 166,560 200,550 Z"/>
+  </g>
+  
+  <!-- Highlight circles for the five destinations with pulsing animation -->
+  <style>
+    @keyframes pulse {
+      0% { opacity: 0.4; r: 15; }
+      50% { opacity: 0.8; r: 18; }
+      100% { opacity: 0.4; r: 15; }
+    }
+    .destination-marker {
+      animation: pulse 2s infinite ease-in-out;
+    }
+    .destination-label {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      fill: #333;
+      text-anchor: middle;
+    }
+  </style>
+  
+  <!-- Japan -->
+  <circle cx="950" cy="180" r="15" fill="#ff9999" stroke="#ff6666" stroke-width="2" class="destination-marker"/>
+  <text x="950" y="210" class="destination-label">Japan</text>
+  
+  <!-- Switzerland -->
+  <circle cx="600" cy="170" r="15" fill="#ff9999" stroke="#ff6666" stroke-width="2" class="destination-marker"/>
+  <text x="600" y="200" class="destination-label">Switzerland</text>
+  
+  <!-- New Zealand -->
+  <circle cx="1050" cy="500" r="15" fill="#ff9999" stroke="#ff6666" stroke-width="2" class="destination-marker"/>
+  <text x="1050" y="530" class="destination-label">New Zealand</text>
+  
+  <!-- Iceland -->
+  <circle cx="530" cy="120" r="15" fill="#ff9999" stroke="#ff6666" stroke-width="2" class="destination-marker"/>
+  <text x="530" y="150" class="destination-label">Iceland</text>
+  
+  <!-- Maldives -->
+  <circle cx="720" cy="350" r="15" fill="#ff9999" stroke="#ff6666" stroke-width="2" class="destination-marker"/>
+  <text x="720" y="380" class="destination-label">Maldives</text>
+</svg>
