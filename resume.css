@@ -1,0 +1,243 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5eee6;
+    color: #333;
+    padding: 0;
+}
+
+/* Resume Container */
+.resume-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.resume-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Profile Section */
+.profile-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 30px;
+    background-color: #f3d7ca;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Section */
+.text-section {
+    flex: 2;
+    min-width: 300px;
+    padding: 30px;
+}
+
+/* Header */
+header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e6a4b4;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Section Headings */
+h2 {
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 20px 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f3d7ca;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Back to Home Link */
+a[href="index.html"] {
+    display: block;
+    width: max-content;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #f3d7ca;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a[href="index.html"]:hover {
+    background-color: #e6a4b4;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+.main-nav {
+    background-color: #E6A4B4;
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    max-width: 100vw;
+    overflow-x: auto;
+    scrollbar-width: none;
+    justify-content: center;
+}
+
+.main-nav ul::-webkit-scrollbar {
+    display: none;
+}
+
+.main-nav li {
+    margin: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.main-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-color: rgba(255, 248, 227, 0.3);
+}
+
+.main-nav a:hover {
+    background-color: #F3D7CA;
+    color: #333;
+}
+
+.main-nav i {
+    margin-right: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.main-nav li.active::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+    height: 3px;
+}
+
+.main-nav li.active a {
+    background-color: rgba(230, 164, 180, 0.5);
+    color: #333;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-content {
+        flex-direction: column;
+    }
+    
+    .profile-section {
+        padding: 20px;
+    }
+    
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .text-section {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+}

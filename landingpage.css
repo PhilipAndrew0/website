@@ -1,0 +1,271 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5eee6;
+    color: #333;
+    padding: 20px;
+    padding-top: 80px; /* Add padding to account for fixed navigation */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+    color: #333;
+    padding-top: 100px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #e6a4b4;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    padding: 12px 0;
+    backdrop-filter: saturate(180%) blur(10px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav li {
+    margin: 0 5px;
+    position: relative;
+}
+
+nav a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 164, 180, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+nav a:hover::before {
+    opacity: 1;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    color: #000;
+}
+
+nav a:active {
+    transform: translateY(1px);
+}
+
+nav li.active a {
+    background-color: #e6a4b4;
+    color: white;
+    box-shadow: 0 4px 10px rgba(230, 164, 180, 0.3);
+}
+
+nav li.active a::before {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    nav {
+        padding: 10px 0;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+    
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Subtle Animated Underline for Active/Hover States */
+nav li::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #e6a4b4;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav li.active::after,
+nav li:hover::after {
+    width: 100%;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 30px;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Sections */
+.section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e6a4b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f3d7ca;
+    color: #333;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        padding-top: 70px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        padding: 5px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5eee6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e6a4b4;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f3d7ca;
+} 

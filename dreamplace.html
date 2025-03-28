@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Places to Visit</title>
+    <link rel="stylesheet" href="dreamplace.css">
+    <link rel="stylesheet" href="images/country_icons.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="main-nav-container">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="bio.html"><i class="fa-solid fa-user"></i> Biography</a></li>
+                <li><a href="skills.html"><i class="fa-solid fa-lightbulb"></i> Skills</a></li>
+                <li><a href="resume.html"><i class="fa-solid fa-file"></i> Resume</a></li>
+                <li><a href="gallerydump.html"><i class="fa-solid fa-images"></i> Gallery</a></li>
+                <li><a href="mybeat.html"><i class="fa-brands fa-spotify"></i> My Beats</a></li>
+                <li><a href="movies.html"><i class="fa-solid fa-film"></i> My Film</a></li>
+                <li><a href="tvshows.html"><i class="fa-solid fa-tv"></i> TV Shows</a></li>
+                <li class="active"><a href="dreamplace.html"><i class="fa-solid fa-plane"></i> Dream Places</a></li>
+                <li><a href="bucketlist.html"><i class="fas fa-list"></i> Bucket List</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Dream Places to Visit</h1>
+        <p class="intro">Here are five amazing destinations I dream of visiting someday. Click on different areas of the world map to explore these dream destinations!</p>
+        
+        <div class="map-container">
+            <img src="images/map.jpg" alt="World Map" class="world-map" usemap="#world-map">
+            
+            <!-- Image Map with different shapes -->
+            <map name="world-map">
+                <!-- Japan (circle) -->
+                <area shape="circle" coords="950,180,20" href="japan.html" alt="Japan" title="Japan">
+                <!-- Switzerland (rect) -->
+                <area shape="rect" coords="580,150,620,190" href="switzerland.html" alt="Switzerland" title="Switzerland">
+                <!-- New Zealand (poly) -->
+                <area shape="poly" coords="1050,490,1070,500,1060,520,1040,510,1030,500" href="newzealand.html" alt="New Zealand" title="New Zealand">
+                <!-- Iceland (circle) -->
+                <area shape="circle" coords="530,120,20" href="iceland.html" alt="Iceland" title="Iceland">
+                <!-- Maldives (rect) -->
+                <area shape="rect" coords="700,330,740,370" href="maldives.html" alt="Maldives" title="Maldives">
+            </map>
+            
+            <!-- Country Icons positioned exactly at the circle markers -->
+            <a href="japan.html">
+                <img src="images/japan.svg" alt="Japan" class="country-icon" style="top: 177px; left: 919px;" title="Japan">
+            </a>
+            <a href="switzerland.html">
+                <img src="images/switzerland.svg" alt="Switzerland" class="country-icon" style="top: 167px; left: 582px;" title="Switzerland">
+            </a>
+            <a href="newzealand.html">
+                <img src="images/newzealand.svg" alt="New Zealand" class="country-icon" style="top: 300px; left: 900px;" title="New Zealand">
+            </a>
+            <a href="iceland.html">
+                <img src="images/iceland.svg" alt="Iceland" class="country-icon" style="top: 117px; left: 510px;" title="Iceland">
+            </a>
+            
+            <a href="maldives.html">
+                <img src="images/maldives.svg" alt="Maldives" class="country-icon" style="top: 339px; left: 697px;" title="Maldives">
+            </a>
+        </div>
+        </div>
+        
+        <div class="destinations">
+            <div class="destination-instructions">
+                <h2><i class="fas fa-map-marked-alt"></i> How to Use This Map</h2>
+                <div class="map-guide">
+                    <div class="guide-section">
+                        <h3><i class="fas fa-info-circle"></i> Interactive World Map</h3>
+                        <p>Click on the highlighted areas or country icons on the world map to explore detailed information about each dream destination. Hover over icons to see country names.</p>
+                    </div>
+                    
+                    <div class="guide-section">
+                        <h3><i class="fas fa-globe-americas"></i> Available Destinations</h3>
+                        <ul class="destination-list">
+                            <li><i class="fas fa-check-circle"></i> <strong>Japan</strong> - Land of the Rising Sun (East Asia)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Switzerland</strong> - Alpine Paradise (Central Europe)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>New Zealand</strong> - Land of the Long White Cloud (Oceania)</li>
+                            <li><i class="fas fa-clock"></i> <strong>Iceland</strong> - Land of Fire and Ice (Northern Europe)</li>
+                            <li><i class="fas fa-clock"></i> <strong>Maldives</strong> - Tropical Paradise (South Asia)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guide-section">
+                        <h3><i class="fas fa-camera"></i> What You'll Find</h3>
+                        <p>Each destination page features:</p>
+                        <ul>
+                            <li>Beautiful images showcasing the destination</li>
+                            <li>Personal reasons why I want to visit</li>
+                            <li>Specific experiences I'm looking forward to</li>
+                            <li>Easy navigation back to this world map</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-to-top">
+            <a href="#" class="top-button"><i class="fas fa-arrow-up"></i> Back to Top</a>
+        </div>
+    </div>
+</body>
+</html>
